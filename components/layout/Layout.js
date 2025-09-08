@@ -15,7 +15,7 @@ function layout({ children }) {
         <a href="https://vahidhosseini.net" target="_blank">
           VHD
         </a>
-        Next.js Project | Care Sale &copy;
+        {" Next.js Project | Care Sale"} &copy;
       </footer>
     </>
   );

@@ -1,6 +1,13 @@
 import Head from "next/head";
+import Categories from "@/components/module/Categories";
+import SearchBar from "@/components/module/SearchBar";
+import CarsPage from "@/components/templates/CarsPage";
+import carsData from "@/data/carsData";
+import AllButton from "@/components/module/AllButton";
 
-export default function Home() {
+function Index() {
+  const cars = carsData.slice(0, 3);
+
   return (
     <>
       <Head>
@@ -10,8 +17,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <h1>CarSale project</h1>
+        <SearchBar />
+        <Categories />
+        <AllButton />
+        <CarsPage data={cars} />
       </div>
     </>
   );
 }
+
+export default Index;
